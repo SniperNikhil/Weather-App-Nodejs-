@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="weather all">
+            <div class="weathercityname">
+                <label for="">{{list.name}}</label>
+            </div>
+            <div class="temperature">
+                <label for="" class="deg">{{list.main.temp}}</label>
+                <label for="" class="symbol">&deg;</label>
+                <label for="" class="unit">C</label>
+            </div>
+            <div class="middle">
+                <label for="">Min-Temp : {{list.main.temp_min}} C</label>
+                <label for="">Max-Temp : {{list.main.temp_max}} C</label>
+            </div><br>
+            <hr>
+            <div class="note">
+                <label for="">Note :</label>
+                Please Note if your are getting wrong weather data then allow the location on browser
+                and refresh twice you will get correct data .
+            </div>
+        </div>
+        <div class="title all">
+            <label for="">Weather App</label>
+        </div>
+        <div class="cityname all">
+            <label for="" class="citylabel">City :</label>
+            <div class="middle">
+                <label for="">{{list.name}}</label>
+            </div>
+        </div>
+        <div class="coordinate all">
+            <label for="" class="citylabel">Coordinates :</label>
+            <div class="middle">
+                <label for="">Latitude : {{list.coord.lat}}</label>
+                <label for="">Longitude : {{list.coord.lon}}</label>
+            </div>
+        </div>
+        <div class="weatherdescription all">
+            <label for="" class="citylabel">Description :</label>
+            <div class="middle">
+                <label for="">{{list.weather.[0].description}}</label>
+            </div>
+        </div>
+        <div class="pressure all">
+            <label for="" class="citylabel">Pressure :</label>
+            <div class="middle">
+                <label for="">{{list.main.pressure}} hPa</label>
+            </div>
+        </div>
+        <div class="humidity all">
+            <label for="" class="citylabel">Humidity :</label>
+            <div class="middle">
+                <label for="">{{list.main.humidity}} %</label>
+            </div>
+        </div>
+        <div class="visibility all">
+            <label for="" class="citylabel">Visibility :</label>
+            <div class="middle">
+                <label for="">{{list.visibility}} m</label>
+            </div>
+        </div>
+        <div class="wind all">
+            <label for="" class="citylabel">Wind :</label>
+            <div class="middle">
+                <label for="">Speed : {{list.wind.speed}} m/s</label>
+                <label for="">Direction : {{list.wind.deg}} deg</label>
+            </div>
+        </div>
+        <div class="Timeofdatacalculation all">
+            <label for="" class="citylabel">Observation Time :</label>
+            <div class="middle">
+                <label for="" onchange="convert()" id="time">{{list.dt}}</label>
+            </div>
+        </div>
+        <div class="countrycode all">
+            <label for="" class="citylabel">Country Code :</label>
+            <div class="middle">
+                <label for="">{{list.sys.country}}</label>
+            </div>
+        </div>
+        <div class="sunrisetime all">
+            <label for="" class="citylabel">Sunrise Time :</label>
+            <div class="middle">
+                <label for="" id="sunrise">{{list.sys.sunrise}}</label>
+            </div>
+        </div>
+        <div class="sunsettime all">
+            <label for="" class="citylabel">Sunset Time :</label>
+            <div class="middle">
+                <label for="" id="sunset">{{list.sys.sunset}}</label>
+            </div>
+        </div>
+        <div class="blank all">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
